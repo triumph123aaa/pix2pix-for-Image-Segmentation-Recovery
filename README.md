@@ -31,3 +31,11 @@ To install the required dependencies, run the following command:
 ```bash
 pip install -r requirements.txt
 
+## ModelOverview
+
+### U-Net Encoder-Decoder
+The encoder part of the U-Net learns the features of the input segmentation label, while the decoder reconstructs the original image. Skip connections between corresponding layers in the encoder and decoder help preserve spatial information, ensuring the output is as close to the original image as possible.
+
+### PatchGAN Discriminator
+The PatchGAN discriminator evaluates small patches within the generated image and classifies them as either real or fake. This type of discriminator helps improve the quality of the output by forcing the generator to produce more realistic details.
+
